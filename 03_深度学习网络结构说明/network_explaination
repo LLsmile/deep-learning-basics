@@ -1,8 +1,0 @@
-网络结构说明
-本文网络结构说明参照YOLOV4进行阐述，有条件的同学可以直接阅读论文。为了避免翻译造成的歧义，专业术语基本使用英文表示。
-网络一般分为input/backbone/neck/head，此外学习过程中一般还有label信息。
-其中，input表示网络的输入，不同的学习任务有不同的输入数据，常见的输入有单帧图像/多帧图像/热力图，以及其他非图像输入。
-backbone对目标进行特征提取，常见的backbone有VGG/googlenet/resnet等等。
-neck为特征融合的网络层，如果没有进行multi-scale特征融合，那么该网络就没有neck。（neck可能作者了解的也不是很清楚！！）
-head是最终进行识别的网络层，分类一般直接用softmax，检测用yolo head/faster rcnn head，或者anchor free方式都可以，
-分割一般使用mask。
